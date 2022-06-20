@@ -1,0 +1,25 @@
+/* .hidden {
+  display: none;
+} */
+.temp {
+  background-color: black;
+  width: 25vw;
+  height: 25vh;
+  display: flex;
+  flex-grow: 1;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.tempp {
+  background-color:rgb(65, 65, 65);
+  color:aliceblue;
+  padding:24px;
+}
+td{
+  display: table-cell;
+  text-align: center;
+  width: 50px;
+  height: 30px;
+  border: 1px black solid;
+}
