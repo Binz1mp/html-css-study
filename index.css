@@ -22,10 +22,28 @@
   color:aliceblue;
   padding:24px;
 }
-td{
+td {
   display: table-cell;
   text-align: center;
   width: 50px;
   height: 30px;
   border: 1px black solid;
+}
+a {
+  color: aquamarine;
+}
+legend.childLegend {
+  color: rgb(125, 202, 176);
+}
+legend.parentLegend {
+  color: rgb(204, 101, 122);
+  font-weight: bold;
+}
+xmp {
+  width: 50vw;
+  margin: 0px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: #080606;
+  border: 1px solid #c7c7c7;
 }

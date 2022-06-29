@@ -8,289 +8,327 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>
-    os에서 다크모드 키면 이 페이지도 다크모드로 바뀝니다.
-  </h1>
-<details class="hidden">
-<summary>열어서 확인</summary>
-  주석<sup><a href="https://www.naver.com" target="_blank">[1]</a></sup>
-  <u>아니...</u> <s>아니...</s>
-  <blockquote style="background-color: red; text-align:center;">아니....</blockquote>
-  <span style="background-color: red;">아니...</span>
-  <cite title="싫어...">아니...</cite>
-  <abbr title="123123" style="background-color: gray;">아니...</abbr>
-  <i>아니...</i>
-  <ul title="동그라미">
-    <li>1</li>
-    <li>2</li>
-    <li>3
-      <ul>
-        <li>3-1</li>
-        <li>3-2</li>
-        <li>3-3</li>
-      </ul>
-    </li>
-  </ul>
-  <ol title="숫자 순서" type="A" start="3">
-    <li>알파</li>
-    <li>베타</li>
-    <li>감마</li>
-  </ol>
-</details>
-<details class="hidden">
-<summary>열어서 확인</summary>
-  <dl>
-  <dt>동텡</dt>
-  <dd>동동</dd>
-</dl>
-</details>
-<details class="hidden">
-<summary>열어서 확인</summary>
-<img src="./imgs/crab.jpg" title="대충 마우스 대면 뭐시기" alt="이미지 사이트가 망햇나봐요" style="display:block;
-  margin-right: auto;
-  margin-left: auto;
-  width: 50vw;">
-  <div style="text-align: center;">중앙에 두려면 뭐시기</div>
-</details>
-<details>
-<summary>열어서 확인</summary>
-  <div class="temp">
-    <div class="tempp">엘렐레</div>
-  </div>
-</details>
-<details>
-<summary>열어서 확인</summary>
-  <table>
-    <tr>
-      <td scope="col">과목</td>
-      <td scope="col" colspan="2">월</td>
-      <!-- <td scope="col">화</td> -->
-      <td scope="col">수</td>
-    </tr>
-    <tr>
-      <td scope="row">A</td>
-      <td rowspan="2">1</td>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td scope="row">B</td>
-      <td colspan="2">4</td>
-      <!-- <td>5</td> -->
-      <!-- <td>6</td> -->
-    </tr>
-    <tr>
-      <td scope="row">C</td>
-      <td>7</td>
-      <td rowspan="2" colspan="2">8</td>
-      <!-- <td>9</td> -->
-    </tr>
-    <tr>
-      <td scope="row">D</td>
-      <td>10</td>
-      <!-- <td>11</td> -->
-      <!-- <td>12</td> -->
-    </tr>
-  </table>
-</details>
-<details>
-  <summary>열어서 확인</summary>
-  <fieldset>
-    <legend>dpddpd</legend>
-    1231231231
-    <fieldset>
-      <legend>활성화</legend>
-      <label for="name-1">이름</label>
-      <input id="name-1" value="">
-      <button>ㅇㅇ</button>
+  <h1>os에서 다크모드 키면 이 페이지도 다크모드로 바뀝니다.</h1>
+  <xmp>/* 사용자가 윈도우 다크모드면 아래 속성 사용 */
+  @media (prefers-color-scheme : dark) {
+    body {
+      background-color: #161616;
+      color: #c7c7c7;
+    }
+  }</xmp>
+  <s>고마워요 media 대단해!!!!!</s>
+  <fieldset><legend class="parentLegend">HTML</legend>
+    <fieldset><legend class="childLegend">뭉탱이</legend>
+      <details><summary>주석 및 목록(list) 만들기 - 01</summary>
+        주석<sup><a href="https://www.naver.com" target="_blank" title="누르면 네이버로 들어가진다.">[1]</a></sup>
+        <u>아니...</u>
+        <s>아니...</s>
+        <blockquote style="background-color: red; text-align:center;">blockquote</blockquote>
+        <div style="background-color: red; text-align:center;">div</div>
+        <span style="background-color: red;">아니...</span>
+        <cite title="싫어...">아니...</cite>
+        <abbr title="123123" style="background-color: gray;">아니...</abbr>
+        <i>아니...</i>
+        <ul title="동그라미">
+          <li>1</li>
+          <li>2</li>
+          <li>3
+            <ul>
+              <li>3-1</li>
+              <li>3-2</li>
+              <li>3-3</li>
+            </ul>
+          </li>
+        </ul>
+        <ol title="숫자 순서" type="A" start="3">
+          <li>알파</li>
+          <li>베타</li>
+          <li>감마</li>
+        </ol>
+      </details>
+      <details><summary>목록(list) 만들기 - 02</summary>
+        <a href="https://www.codingfactory.net/10225" target="_blank">여기 참조해서 더 공부하기</a>
+        <dl>
+          <dt>동텡</dt>
+          <dd>동동</dd>
+        </dl>
+      </details>
+      <details><summary>이미지 중앙 정렬은 마진 좌우 오토</summary>
+        <img src="./imgs/crab.jpg" title="대충 마우스 대면 뭐시기" alt="이미지 사이트가 망햇나봐요" style="display:block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 50vw;">
+        <div style="text-align: center;">중앙에 두려면 뭐시기</div>
+      </details>
+      <details><summary>검은 상자 안에 중앙정렬된 회색 상자 안에 글자</summary>
+        <div class="temp">
+          <div class="tempp">엘렐레</div>
+        </div>
+      </details>
+      <details><summary>표 만들기 - 시간표 과목 등등</summary>
+        <table>
+          <tr>
+            <td scope="col">과목</td>
+            <td scope="col" colspan="2">월</td>
+            <!-- <td scope="col">화</td> -->
+            <td scope="col">수</td>
+          </tr>
+          <tr>
+            <td scope="row">A</td>
+            <td rowspan="2">1</td>
+            <td>2</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td scope="row">B</td>
+            <td colspan="2">4</td>
+            <!-- <td>5</td> -->
+            <!-- <td>6</td> -->
+          </tr>
+          <tr>
+            <td scope="row">C</td>
+            <td>7</td>
+            <td rowspan="2" colspan="2">8</td>
+            <!-- <td>9</td> -->
+          </tr>
+          <tr>
+            <td scope="row">D</td>
+            <td>10</td>
+            <!-- <td>11</td> -->
+            <!-- <td>12</td> -->
+          </tr>
+        </table>
+      </details>
+      <details><summary>input 활성화 비활성화</summary>
+        <fieldset>
+          <legend>dpddpd</legend>
+          1231231231
+          <fieldset>
+            <legend>활성화</legend>
+            <label for="name-1">이름</label>
+            <input id="name-1" value="">
+            <button>ㅇㅇ</button>
+          </fieldset>
+          <fieldset disabled>
+            <legend>비활성화</legend>
+            <label for="name-2">이름</label>
+            <input id="name-2">
+            <button>ㅇㅇ</button>
+          </fieldset>
+        </fieldset>
+      </details>
     </fieldset>
-    <fieldset disabled>
-      <legend>비활성화</legend>
-      <label for="name-2">이름</label>
-      <input id="name-2">
-      <button>ㅇㅇ</button>
+    <fieldset><legend>2022-06-20 - 입력받기</legend>
+      <details><summary>입력받기 1,2 - label input checkbox radio</summary>
+      <fieldset><legend>그냥 제목</legend>
+        <label for="name-3">이름</label>
+        <input id="name-3" placeholder="한글 또는 영어로 입력">
+        <br>
+        <label for="email-1">이메일</label>
+        <input id="email-1" type="email" placeholder="abcd@abcd.com">
+        <br>
+        <label for="password-1">비밀번호</label>
+        <input id="password-1" type="password" placeholder="최대 4자 이상" minlength="4">
+        <br>
+        <label for="birthday-1">생년월일</label>
+        <input id="birthday-1" type="number" placeholder="- 없이 8자로 입력">
+        <br>
+        <label for="required-1">필수입력항목</label>
+        <input id="required-1" placeholder="필수로 입력해야됩니다" required>
+        <br>
+        <label for="range-1">range</label>
+        <input id="range-1" type="range" min="0" max="100" step="20" value=""><span>자바스크립트랑 같이 써야 알아요</span>
+        <br>
+        <label for="date-1">date</label>
+        <input id="date-1" type="date" min="2022-01-01" max="2022-06-20">
+        <hr>
+        <div>name 통일해도 얘네는 하나하나 다 선택됨</div>
+        <input id="checkbox-1" name="checkbox-row-1" type="checkbox" checked>
+        <label for="checkbox-1">체크박스</label>
+        <input id="checkbox-2" name="checkbox-row-1" type="checkbox">
+        <label for="checkbox-2">체크박스</label>
+        <input id="checkbox-3" name="checkbox-row-1" type="checkbox">
+        <label for="checkbox-3">체크박스</label>
+        <input id="checkbox-4" name="checkbox-row-1" type="checkbox">
+        <label for="checkbox-4">체크박스</label>
+        <input id="checkbox-5" name="checkbox-row-1" type="checkbox">
+        <label for="checkbox-5">체크박스</label>
+        <br>
+        <div>name 통일하면 얘네는 하나씩만 선택됨</div>
+        <input id="radio-1" name="radio-row-1" type="radio" checked>
+        <label for="radio-1">라디오박스</label>
+        <input id="radio-2" name="radio-row-1" type="radio">
+        <label for="radio-2">라디오박스</label>
+        <input id="radio-3" name="radio-row-1" type="radio">
+        <label for="radio-3">라디오박스</label>
+        <input id="radio-4" name="radio-row-1" type="radio">
+        <label for="radio-4">라디오박스</label>
+        <input id="radio-5" name="radio-row-1" type="radio">
+        <label for="radio-5">라디오박스</label>
+        <hr>
+        <input id="fileUpload" type="file" accept=".jpg, .png, .gif" multiple>
+        <hr>
+        <input value="123"><span>이 값은 수정 가능하고, 전송될때도 이 값으로 전송됩니다.</span>
+        <br>
+        <input value="123" readonly><span>이 값은 수정 불가능하고, 전송될때 이 값으로 전송됩니다.</span>
+        <br>
+        <input value="123" disabled><span>이 값은 수정 불가능하고, 전송될때 값이 전송되지 않습니다.</span>
+        <br>
+        <input id="radio-6" name="radio-row-2" type="radio">
+        <label for="radio-6">품목A</label>
+        <input id="radio-7" name="radio-row-2" type="radio">
+        <label for="radio-7">품목B</label>
+        <input id="radio-8" name="radio-row-2" type="radio" disabled>
+        <label for="radio-8">품목C</label>
+      </fieldset>
+      </details>
+      <details><summary>입력받기 3</summary>
+        <textarea cols="50" rows="5" maxlength="100" placeholder="메시지를 입력하세요. (최대 100자)"></textarea>
+        <hr>
+        <span>뭐 먼저 공부할래요?</span>
+        <select id="select-1">
+          <option value="math">수학</option>
+          <option value="science">과학</option>
+          <option value="language">언어</option>
+          <option value="history">역사</option>
+        </select>
+        <br>
+        <span>뭐 먼저 공부할래요? - 구체적으로</span>
+        <select id="select-2">
+          <optgroup label="수학">
+            <option value="study-math-1">공업수학</option>
+            <option value="study-math-2">이산수학</option>
+            <option value="study-math-3">선형대수학</option>
+          </optgroup>
+          <optgroup label="언어">
+            <option value="study-lang-1">영어</option>
+            <option value="study-lang-2">중국어</option>
+            <option value="study-lang-3">일본어</option>
+            <option value="study-lang-4">스페인어</option>
+            <option value="study-lang-5">프랑스어</option>
+          </optgroup>
+        </select>
+        <hr>
+        <label for="job">현재 직업은?</label>
+        <input id="job" list="jobs">
+        <datalist id="jobs">
+          <option value="전사">
+          <option value="마법사">
+          <option value="궁수">
+          <option value="도적">
+          <option value="성직자">
+        </datalist>
+        <br>
+        <label for="geonumber">지역번호</label>
+        <input id="geonumber" list="geonumbers">
+        <datalist id="geonumbers">
+          <option value="01">
+          <option value="02">
+          <option value="03">
+          <option value="04">
+          <option value="05">
+        </datalist>
+        <hr>
+        <progress min="0" max="100"></progress>
+        <progress min="0" max="100" value="40"></progress>
+        <progress min="0" max="100" value="60"></progress>
+        <progress min="0" max="100" value="80"></progress>
+        <progress min="0" max="100" value="20"></progress>
+        <progress min="0" max="100" value="100"></progress>
+        <hr>
+        <div>min = 0</div>
+        <div>max = 100</div>
+        <div>low = 33</div>
+        <div>high = 67</div>
+        <hr>
+        <div>optimum = 10 (10에 가까울수록 좋다)</div>
+        <meter min="0" max="100" low="33" high="66" optimum="10" value="25"></meter>
+        <span>25</span>
+        <div></div>
+        <meter min="0" max="100" low="33" high="66" optimum="10" value="50"></meter>
+        <span>50</span>
+        <div></div>
+        <meter min="0" max="100" low="33" high="66" optimum="10" value="75"></meter>
+        <span>75</span>
+        <div></div>
+        <meter min="0" max="100" low="33" high="66" optimum="10" value="100"></meter>
+        <span>100</span>
+        <div></div>
+        <hr>
+        <div>optimum = 90 (90에 가까울수록 좋다)</div>
+        <meter min="0" max="100" low="33" high="66" optimum="90" value="25"></meter>
+        <span>25</span>
+        <div></div>
+        <meter min="0" max="100" low="33" high="66" optimum="90" value="50"></meter>
+        <span>50</span>
+        <div></div>
+        <meter min="0" max="100" low="33" high="66" optimum="90" value="75"></meter>
+        <span>75</span>
+        <div></div>
+        <meter min="0" max="100" low="33" high="66" optimum="90" value="100"></meter>
+        <span>100</span>
+        <div></div>
+      </details>
+    </fieldset>  
+  </fieldset>
+
+  <fieldset><legend class="parentLegend">CSS</legend>
+    <fieldset><legend class="childLegend">2022-06-22 - CSS 0</legend>
+      <details>
+        <summary>CSS로 넘어가기 전에...</summary>
+        <pre>
+    pre 태그에 텍스트를 작성하면 스페이스, 탭, 엔터 등
+    모든 공백 요소들이 이와 같이 화면에 그대로 적용됩니다.
+
+    때문에 pre 태그는 아래의 아스키 아트(Ascii art)들처럼
+    공백요소들을 적극 활용해야 하는 경우 유용하게 사용될 수 있습니다.
+
+    하지만 스크린 리더는 pre 태그의 내용을 읽지 않으므로
+    접근성을 위해 추가적인 조치가 필요하죠.
+    이 부분은 HTML 심화편에서 다루겠습니다.
+
+        ,d888a                          ,d88888888888ba.  ,88"I)   d
+      a88']8i                         a88".8"8)   `"8888:88  " _a8'
+    .d8P' PP                        .d8P'.8  d)      "8:88:baad8P'
+    ,d8P' ,ama,   .aa,  .ama.g ,mmm  d8P' 8  .8'        88):888P'
+    ,d88' d8[ "8..a8"88 ,8I"88[ I88' d88   ]IaI"        d8[         
+    a88' dP "bm8mP8'(8'.8I  8[      d88'    `"         .88          
+    ,88I ]8'  .d'.8     88' ,8' I[  ,88P ,ama    ,ama,  d8[  .ama.g
+    [88' I8, .d' ]8,  ,88B ,d8 aI   (88',88"8)  d8[ "8. 88 ,8I"88[
+    ]88  `888P'  `8888" "88P"8m"    I88 88[ 8[ dP "bm8m88[.8I  8[
+    ]88,          _,,aaaaaa,_       I88 8"  8 ]P'  .d' 88 88' ,8' I[
+    `888a,.  ,aadd88888888888bma.   )88,  ,]I I8, .d' )88a8B ,d8 aI
+    "888888PP"'        `8""""""8   "888PP'  `888P'  `88P"88P"8m"
+        </pre>
+      </details>
+    </fieldset>
+    <fieldset><legend class="childLegend">2022-06-29 - CSS 1</legend>
+      <details>
+        <summary>CSS 1 - 적용방법과 선택자들</summary>
+        <div>평범하게 css 적용하는 방법은 대표적으로 세가지가 있음</div>
+        <ol>
+          <li>
+          html 태그마다 style 속성 넣어서 하기. 근데 비추임. 왜냐면 코드 분리가 안돼있어서 지저분해보임.
+          </li>
+          <li>
+          head 태그 안에 style 태그 넣고 거기에 넣는거. 이거도 별로임. 왜냐면 나중에 길어지면 문서 관리하기 귀찮아짐.
+          </li>
+          <li>
+          css 파일 만들어서 head  태그 안에 링크시키기. 이게 최고임. 왜냐면 코드 분리가 돼있어서 정리하기도 보기도 편함.
+          <br>
+          3-1. 방법은 쉬움. head 태그 안에
+          <xmp>  <link rel="stylesheet" href="./index.css"></xmp>
+          일케 하면 됨
+          </li>
+        </ul>
+      </details>
+    </fieldset>
+    <fieldset><legend class="childLegend">2022-06-29 - CSS 2</legend>
+      <details><summary>글자와 텍스트 스타일</summary>
+        <div></div>
+      </details>
     </fieldset>
   </fieldset>
-</details>
-<fieldset>
-  <legend>2022-06-20 - 입력받기</legend>
-  <details>
-  <summary>입력받기 1,2 - label input checkbox radio</summary>
-    <fieldset>
-      <legend>그냥 제목</legend>
-      <label for="name-3">이름</label>
-      <input id="name-3" placeholder="한글 또는 영어로 입력">
-      <br>
-      <label for="email-1">이메일</label>
-      <input id="email-1" type="email" placeholder="abcd@abcd.com">
-      <br>
-      <label for="password-1">비밀번호</label>
-      <input id="password-1" type="password" placeholder="최대 4자 이상" minlength="4">
-      <br>
-      <label for="birthday-1">생년월일</label>
-      <input id="birthday-1" type="number" placeholder="- 없이 8자로 입력">
-      <br>
-      <label for="required-1">필수입력항목</label>
-      <input id="required-1" placeholder="필수로 입력해야됩니다" required>
-      <br>
-      <label for="range-1">range</label>
-      <input id="range-1" type="range" min="0" max="100" step="20" value=""><span>자바스크립트랑 같이 써야 알아요</span>
-      <br>
-      <label for="date-1">date</label>
-      <input id="date-1" type="date" min="2022-01-01" max="2022-06-20">
-      <hr>
-      <div>name 통일해도 얘네는 하나하나 다 선택됨</div>
-      <input id="checkbox-1" name="checkbox-row-1" type="checkbox" checked>
-      <label for="checkbox-1">체크박스</label>
-      <input id="checkbox-2" name="checkbox-row-1" type="checkbox">
-      <label for="checkbox-2">체크박스</label>
-      <input id="checkbox-3" name="checkbox-row-1" type="checkbox">
-      <label for="checkbox-3">체크박스</label>
-      <input id="checkbox-4" name="checkbox-row-1" type="checkbox">
-      <label for="checkbox-4">체크박스</label>
-      <input id="checkbox-5" name="checkbox-row-1" type="checkbox">
-      <label for="checkbox-5">체크박스</label>
-      <br>
-      <div>name 통일하면 얘네는 하나씩만 선택됨</div>
-      <input id="radio-1" name="radio-row-1" type="radio" checked>
-      <label for="radio-1">라디오박스</label>
-      <input id="radio-2" name="radio-row-1" type="radio">
-      <label for="radio-2">라디오박스</label>
-      <input id="radio-3" name="radio-row-1" type="radio">
-      <label for="radio-3">라디오박스</label>
-      <input id="radio-4" name="radio-row-1" type="radio">
-      <label for="radio-4">라디오박스</label>
-      <input id="radio-5" name="radio-row-1" type="radio">
-      <label for="radio-5">라디오박스</label>
-      <hr>
-      <input id="fileUpload" type="file" accept=".jpg, .png, .gif" multiple>
-      <hr>
-      <input value="123"><span>이 값은 수정 가능하고, 전송될때도 이 값으로 전송됩니다.</span>
-      <br>
-      <input value="123" readonly><span>이 값은 수정 불가능하고, 전송될때 이 값으로 전송됩니다.</span>
-      <br>
-      <input value="123" disabled><span>이 값은 수정 불가능하고, 전송될때 값이 전송되지 않습니다.</span>
-      <br>
-      <input id="radio-6" name="radio-row-2" type="radio">
-      <label for="radio-6">품목A</label>
-      <input id="radio-7" name="radio-row-2" type="radio">
-      <label for="radio-7">품목B</label>
-      <input id="radio-8" name="radio-row-2" type="radio" disabled>
-      <label for="radio-8">품목C</label>
-    </fieldset>
-  </details>
-  <details>
-  <summary>입력받기 3</summary>
-    <textarea cols="50" rows="5" maxlength="100" placeholder="메시지를 입력하세요. (최대 100자)"></textarea>
-    <hr>
-    <span>뭐 먼저 공부할래요?</span>
-    <select id="select-1">
-      <option value="math">수학</option>
-      <option value="science">과학</option>
-      <option value="language">언어</option>
-      <option value="history">역사</option>
-    </select>
-    <br>
-    <span>뭐 먼저 공부할래요? - 구체적으로</span>
-    <select id="select-2">
-      <optgroup label="수학">
-        <option value="study-math-1">공업수학</option>
-        <option value="study-math-2">이산수학</option>
-        <option value="study-math-3">선형대수학</option>
-      </optgroup>
-      <optgroup label="언어">
-        <option value="study-lang-1">영어</option>
-        <option value="study-lang-2">중국어</option>
-        <option value="study-lang-3">일본어</option>
-        <option value="study-lang-4">스페인어</option>
-        <option value="study-lang-5">프랑스어</option>
-      </optgroup>
-    </select>
-    <hr>
-    <label for="job">현재 직업은?</label>
-    <input id="job" list="jobs">
-    <datalist id="jobs">
-      <option value="전사">
-      <option value="마법사">
-      <option value="궁수">
-      <option value="도적">
-      <option value="성직자">
-    </datalist>
-    <hr>
-    <progress min="0" max="100"></progress>
-    <progress min="0" max="100" value="40"></progress>
-    <progress min="0" max="100" value="60"></progress>
-    <progress min="0" max="100" value="80"></progress>
-    <progress min="0" max="100" value="20"></progress>
-    <progress min="0" max="100" value="100"></progress>
-    <hr>
-    <div>min = 0</div>
-    <div>max = 100</div>
-    <div>low = 33</div>
-    <div>high = 67</div>
-    <hr>
-    <div>optimum = 10 (10에 가까울수록 좋다)</div>
-    <meter min="0" max="100" low="33" high="66" optimum="10" value="25"></meter>
-    <span>25</span>
-    <div></div>
-    <meter min="0" max="100" low="33" high="66" optimum="10" value="50"></meter>
-    <span>50</span>
-    <div></div>
-    <meter min="0" max="100" low="33" high="66" optimum="10" value="75"></meter>
-    <span>75</span>
-    <div></div>
-    <meter min="0" max="100" low="33" high="66" optimum="10" value="100"></meter>
-    <span>100</span>
-    <div></div>
-    <hr>
-    <div>optimum = 90 (90에 가까울수록 좋다)</div>
-    <meter min="0" max="100" low="33" high="66" optimum="90" value="25"></meter>
-    <span>25</span>
-    <div></div>
-    <meter min="0" max="100" low="33" high="66" optimum="90" value="50"></meter>
-    <span>50</span>
-    <div></div>
-    <meter min="0" max="100" low="33" high="66" optimum="90" value="75"></meter>
-    <span>75</span>
-    <div></div>
-    <meter min="0" max="100" low="33" high="66" optimum="90" value="100"></meter>
-    <span>100</span>
-    <div></div>
-  </details>
-</fieldset>
-<fieldset>
-  <legend>2022-06-22 - css</legend>
-  <details>
-    <summary>CSS로 넘어가기 전에...</summary>
-    <pre>
-pre 태그에 텍스트를 작성하면 스페이스, 탭, 엔터 등
-모든 공백 요소들이 이와 같이 화면에 그대로 적용됩니다.
 
-때문에 pre 태그는 아래의 아스키 아트(Ascii art)들처럼
-공백요소들을 적극 활용해야 하는 경우 유용하게 사용될 수 있습니다.
-
-하지만 스크린 리더는 pre 태그의 내용을 읽지 않으므로
-접근성을 위해 추가적인 조치가 필요하죠.
-이 부분은 HTML 심화편에서 다루겠습니다.
-
-    ,d888a                          ,d88888888888ba.  ,88"I)   d
-  a88']8i                         a88".8"8)   `"8888:88  " _a8'
-.d8P' PP                        .d8P'.8  d)      "8:88:baad8P'
-,d8P' ,ama,   .aa,  .ama.g ,mmm  d8P' 8  .8'        88):888P'
-,d88' d8[ "8..a8"88 ,8I"88[ I88' d88   ]IaI"        d8[         
-a88' dP "bm8mP8'(8'.8I  8[      d88'    `"         .88          
-,88I ]8'  .d'.8     88' ,8' I[  ,88P ,ama    ,ama,  d8[  .ama.g
-[88' I8, .d' ]8,  ,88B ,d8 aI   (88',88"8)  d8[ "8. 88 ,8I"88[
-]88  `888P'  `8888" "88P"8m"    I88 88[ 8[ dP "bm8m88[.8I  8[
-]88,          _,,aaaaaa,_       I88 8"  8 ]P'  .d' 88 88' ,8' I[
-`888a,.  ,aadd88888888888bma.   )88,  ,]I I8, .d' )88a8B ,d8 aI
-"888888PP"'        `8""""""8   "888PP'  `888P'  `88P"88P"8m"
-    </pre>
-  </details>
-  <details>
-    <summary>CSS 1 - 적용방법과 선택자들</summary>
-
-  </details>
-</fieldset>
 </body>
 </html>
