@@ -8,15 +8,20 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>os에서 다크모드 키면 이 페이지도 다크모드로 바뀝니다.</h1>
-  <xmp>/* 사용자가 윈도우 다크모드면 아래 속성 사용 */
+  <h2>os에서 다크모드를 사용중이면 이 페이지도 다크모드로 바뀝니다. <s style="opacity: 0.25;">내가 보기 편하려고</s></h2>
+  <xmp title="고마워요 media 대단해!!!!!">  /* 사용자가 윈도우 다크모드면 아래 속성 사용 */
   @media (prefers-color-scheme : dark) {
     body {
       background-color: #161616;
       color: #c7c7c7;
     }
   }</xmp>
-  <s>고마워요 media 대단해!!!!!</s>
+  <hr>
+  <h2>
+    이 사이트는
+    <a href="https://www.yalco.kr/@html-css/1-1/" target="_blank" title="얄코로 이동합니다.">얄코</a>로 공부한 자료 메모장입니다.
+  </h2>
+
   <fieldset><legend class="parentLegend">HTML</legend>
     <fieldset><legend class="childLegend">뭉탱이</legend>
       <details><summary>주석 및 목록(list) 만들기 - 01</summary>
@@ -118,7 +123,7 @@
         </fieldset>
       </details>
     </fieldset>
-    <fieldset><legend>2022-06-20 - 입력받기</legend>
+    <fieldset><legend class="childLegend">2022-06-20 - 입력받기</legend>
       <details><summary>입력받기 1,2 - label input checkbox radio</summary>
       <fieldset><legend>그냥 제목</legend>
         <label for="name-3">이름</label>
@@ -274,8 +279,7 @@
 
   <fieldset><legend class="parentLegend">CSS</legend>
     <fieldset><legend class="childLegend">2022-06-22 - CSS 0</legend>
-      <details>
-        <summary>CSS로 넘어가기 전에...</summary>
+      <details><summary>CSS로 넘어가기 전에...</summary>
         <pre>
     pre 태그에 텍스트를 작성하면 스페이스, 탭, 엔터 등
     모든 공백 요소들이 이와 같이 화면에 그대로 적용됩니다.
@@ -303,8 +307,7 @@
       </details>
     </fieldset>
     <fieldset><legend class="childLegend">2022-06-29 - CSS 1</legend>
-      <details>
-        <summary>CSS 1 - 적용방법과 선택자들</summary>
+      <details><summary>적용방법과 선택자들</summary>
         <div>평범하게 css 적용하는 방법은 대표적으로 세가지가 있음</div>
         <ol>
           <li>
@@ -316,16 +319,38 @@
           <li>
           css 파일 만들어서 head  태그 안에 링크시키기. 이게 최고임. 왜냐면 코드 분리가 돼있어서 정리하기도 보기도 편함.
           <br>
-          3-1. 방법은 쉬움. head 태그 안에
+          3-1. 방법은 쉬움. head 태그 안에 이런 형식으로 입력하면 됨
           <xmp>  <link rel="stylesheet" href="./index.css"></xmp>
-          일케 하면 됨
+          <br>
+          3-2. 그리고 index.css 파일에는 이런 형식으로 입력하면 됨
+          <xmp> /* .css */
+  선택자 {
+    속성1: 값;
+    속성2: 값;
+  }
+
+  /* 예시 */
+  div {
+    color: red;
+    font-weight: bold;
+    background-color: black;
+  }</xmp>
           </li>
         </ul>
       </details>
     </fieldset>
     <fieldset><legend class="childLegend">2022-06-29 - CSS 2</legend>
       <details><summary>글자와 텍스트 스타일</summary>
-        <div></div>
+        <div>font-size에 관여하는 속성</div>
+        <ul>
+          <li>px. 절대값이며 픽셀 단위다.</li>
+          <li>%. 말 그대로 퍼센트이다. 부모 요소 안에서 상대적 크기를 가진다.</li>
+          <li>em. 100%는 1em이다.</li>
+          <li>rem. html 요소의 상대적 크기를 갖고, 요소의 중첩에 영향을 받지 않는다!!!</li>
+          <div>┕ 요소의 중첩에 영향을 받지 않는다는 것은, A 요소 안에 A 요소 있으면, 둘 다 적용이 되는게 아니다 라는 것이다.</div>
+          <div>┕ 왜냐하면 html 이라는 최상단 요소에 비례해서 적용한다는 것이다.</div>
+          <li>pt. 1인치/72다. 프린트할 컨텐츠에 사용된다.</li>
+        </ul>
       </details>
     </fieldset>
   </fieldset>
