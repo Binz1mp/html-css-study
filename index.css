@@ -25,9 +25,19 @@
 td {
   display: table-cell;
   text-align: center;
-  width: 50px;
+  width: 125px;
+  height: 60px;
+  border: 1px rgb(165, 164, 164) solid;
+}
+th {
+  color: #eb6f9e;
+}
+.css-td {
+  display: table-cell;
+  text-align: center;
+  width: 200px;
   height: 30px;
-  border: 1px black solid;
+  border: 1px rgb(165, 164, 164) solid;
 }
 a {
   color: aquamarine;
@@ -40,10 +50,31 @@ legend.parentLegend {
   font-weight: bold;
 }
 xmp {
-  width: 50vw;
+  width: 80vw;
   margin: 0px;
   padding-top: 1%;
   padding-bottom: 1%;
   background-color: #080606;
   border: 1px solid #c7c7c7;
 }
+.css2div {
+  text-decoration: overline underline red;
+  text-transform: capitalize;
+}
+.codetitle {
+  color: rgb(212, 160, 91);
+  font-weight: bold;
+  line-height: 200%;
+}
+.codelists {
+  width: 80vw;
+  margin: 0px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+  background-color: #080606;
+  border: 1px solid #c7c7c7;
+}
+.span-inline {display: inline;background-color: rgb(235, 137, 137);color: #161616;}
+.span-block {display: block; background-color: rgb(150, 228, 150);color: #161616;}
+.span-inline-block { display: inline-block; background-color: rgb(164, 164, 243);color: #161616;}

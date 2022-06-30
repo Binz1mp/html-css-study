@@ -351,9 +351,99 @@
           <div>┕ 왜냐하면 html 이라는 최상단 요소에 비례해서 적용한다는 것이다.</div>
           <li>pt. 1인치/72다. 프린트할 컨텐츠에 사용된다.</li>
         </ul>
+        <div class="css2div">text-decoration 속성 응용</div>
+        <xmp>.css2div {
+    text-decoration: overline underline red;
+    text-transform: capitalize;
+  }</xmp>
+      </details>
+    </fieldset>
+    <fieldset><legend class="childLegend">2022-06-30 - CSS 3</legend>
+      <details><summary>문단과 목록 스타일</summary>
+        <div class="codetitle">정렬과 간격</div>
+        <div class="codelists">
+          <div>letter-spacing = 자간</div>
+          <div>word-spacing = 띄어쓰기의 간격, em 단위를 사용하는 것을 추천함</div>
+          <div>line-height = 행간, em 단위를 사용하는 것을 추천함</div>
+          <div>text-indent = 양수값이면 들여쓰기, 음수값이면 내어쓰기</div>
+        </div>
+        <div class="codetitle">리스트 스타일</div>
+        <div class="codelists">
+          <div>list-style = ul ol만들때 앞에 생기는 기호를 바꿀 수 있음. ""안에 원하는 문자열, 이모지 가능. url()도 가능</div>
+        </div>
+      </details>
+    </fieldset>
+    <fieldset><legend class="childLegend">2022-06-30 - CSS 4</legend>
+      <details><summary>색 표현하기</summary>
+        <div class="codetitle">색상 표현</div>
+        <div class="codelists">
+          <div>color = 해당 요소의 폰트 색상. 값으로써 hex, rgba, keyword, hsla 가능</div>
+          <div>background-color = 말 그대로 해당 요소의 배경색. 값으로써 hex, rgba, keyword, hsla 가능</div>
+        </div>
+      </details>
+    </fieldset>
+    <fieldset><legend class="childLegend">2022-06-30 - CSS 5</legend>
+      <details><summary>inline 요소와 block 요소</summary>
+        <div class="codetitle"></div>
+          <div>span과 div의 가장 큰 차이는 display가 inline이냐, block이냐임. 기본적으로 span은 inline, div는 block.</div>
+          <div>inline은 한 요소가 한 줄을 차지하지 않고, block은 차지한다.</div>
+          <table>
+            <tr>
+              <th class="css-td"></td>
+              <th class="css-td">inline</td>
+              <th class="css-td">block</td>
+              <th class="css-td">inline-block</td>
+            </tr>
+            <tr>
+              <th class="css-td">기본 너비</td>
+              <td class="css-td">컨텐츠만큼</td>
+              <td class="css-td">부모의 너비만큼</td>
+              <td class="css-td">컨텐츠만큼</td>
+            </tr>
+            <tr>
+              <th class="css-td">width, height</td>
+              <td class="css-td">무시</td>
+              <td class="css-td">적용</td>
+              <td class="css-td">적용</td>
+            </tr>
+            <tr>
+            <tr>
+              <th class="css-td">가로공간 차지</td>
+              <td class="css-td">공유</td>
+              <td class="css-td">독점</td>
+              <td class="css-td">적용</td>
+            </tr>
+            <tr>
+              <th class="css-td">margin 속성</td>
+              <td class="css-td">가로만</td>
+              <td class="css-td">모두 (상하는 무시됨)</td>
+              <td class="css-td">모두</td>
+            </tr>
+            <tr>
+              <th class="css-td">padding 속성</td>
+              <td class="css-td">가로만, 세로는 배경색만</td>
+              <td class="css-td">모두</td>
+              <td class="css-td">모두</td>
+            </tr>
+          </table>
+          <div>
+            <div class="codetitle">예시</div>
+            <div class="codelists">
+              <div>inline-block에 background-color를 쓸 경우, inline과 다르게 block처럼 살짝 위아래로 꽉 차게 색칠된다.</div>
+              <span class="span-inline">span+inline</span>
+              <span class="span-block">span+block</span>
+              <span class="span-inline-block">span+inline-block</span>
+              <span class="span-inline">span+inline</span>
+              <span class="span-block">span+block</span>
+              <span class="span-inline-block">span+inline-block</span>
+            </div>
+          </div>
+      </details>
+    </fieldset>
+    <fieldset><legend class="childLegend">2022-06-30 - CSS 6</legend>
+      <details><summary>박스 모델 - 1</summary>
       </details>
     </fieldset>
   </fieldset>
-
 </body>
 </html>
