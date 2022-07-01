@@ -48,6 +48,7 @@ legend.childLegend {
 legend.parentLegend {
   color: rgb(204, 101, 122);
   font-weight: bold;
+  font-size: 25px;
 }
 xmp {
   width: 80vw;
@@ -60,6 +61,13 @@ xmp {
 .css2div {
   text-decoration: overline underline red;
   text-transform: capitalize;
+}
+.css3ul {
+  padding: 0;
+  list-style: none;
+}
+.css3ul>li {
+  display: inline-block;
 }
 .codetitle {
   color: rgb(212, 160, 91);
@@ -78,3 +86,34 @@ xmp {
 .span-inline {display: inline;background-color: rgb(235, 137, 137);color: #161616;}
 .span-block {display: block; background-color: rgb(150, 228, 150);color: #161616;}
 .span-inline-block { display: inline-block; background-color: rgb(164, 164, 243);color: #161616;}
+.css6box {
+  display: inline-block;
+  width: 50vw;
+  height: 25vh;
+  background-color: #531c31;
+  margin: 0;
+}
+.css6text {
+  text-align: center;
+}
+.css6boxflex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 25vh;
+  background-color: #2e3450;
+  margin: 0;
+}
+.css7boxshadow {
+  background-color: #531c31;
+  width: 20vw;
+  height: 20vh;
+  box-shadow: 1px 2px 3px 4px #eb6f9e;
+}
+.css8boxgradient {
+  width: 25vw;
+  height: 25vh;
+  background: linear-gradient(45deg, red, green, blue, yellow);
+}

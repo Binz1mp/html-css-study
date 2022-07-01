@@ -8,7 +8,7 @@
   <title>Document</title>
 </head>
 <body>
-  <h2>os에서 다크모드를 사용중이면 이 페이지도 다크모드로 바뀝니다. <s style="opacity: 0.25;">내가 보기 편하려고</s></h2>
+  <h2 class="maintitle">OS에서 다크모드를 사용중이면 이 페이지도 다크모드로 바뀝니다. <s style="opacity: 0.25;">내가 보기 편하려고</s></h2>
   <xmp title="고마워요 media 대단해!!!!!">  /* 사용자가 윈도우 다크모드면 아래 속성 사용 */
   @media (prefers-color-scheme : dark) {
     body {
@@ -16,12 +16,6 @@
       color: #c7c7c7;
     }
   }</xmp>
-  <hr>
-  <h2>
-    이 사이트는
-    <a href="https://www.yalco.kr/@html-css/1-1/" target="_blank" title="얄코로 이동합니다.">얄코</a>로 공부한 자료 메모장입니다.
-  </h2>
-
   <fieldset><legend class="parentLegend">HTML</legend>
     <fieldset><legend class="childLegend">뭉탱이</legend>
       <details><summary>주석 및 목록(list) 만들기 - 01</summary>
@@ -370,6 +364,12 @@
         <div class="codetitle">리스트 스타일</div>
         <div class="codelists">
           <div>list-style = ul ol만들때 앞에 생기는 기호를 바꿀 수 있음. ""안에 원하는 문자열, 이모지 가능. url()도 가능</div>
+          <ul class="css3ul">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+          <div>ul li가 있을 때, li에 display inline-block 하면 가로 정렬됨</div>
         </div>
       </details>
     </fieldset>
@@ -442,6 +442,116 @@
     </fieldset>
     <fieldset><legend class="childLegend">2022-06-30 - CSS 6</legend>
       <details><summary>박스 모델 - 1</summary>
+        <div class="codetitle">박스 모델 다루기 1</div>
+          <div class="css6box">
+            <div class="css6text">
+              <div>이건 상자야</div>
+              <div>상자에 margin auto를 주면 가로세로 중앙정렬이 된단다</div>
+              <div>상자에 margin 0 auto를 주면 가로 중앙정렬이 된단다</div>
+              <div>아참 얘네는 display block일때로만 적용된단다.</div>
+              <div>inline이면 박스의 부모 요소에 text align center 주면 된단다</div>
+            </div>
+          </div>
+          <div class="css6boxflex">
+            <div>안녕?</div>
+            <div>세로 중앙 정렬 텍스트는 처음보지?</div>
+            <div>flex를 사용하면 이렇게 된단다.</div>
+            <div>flex-direction은 한 요소마다 다음 줄로 내리기</div>
+            <div>justify-content는 세로중앙</div>
+            <div>align-content는 가로중앙</div>
+          </div>
+      </details>
+      <legend class="childLegend">2022-07-01 - CSS 7</legend>
+      <details><summary>박스 모델 - 2</summary>
+        <div class="codetitle">box-sizing: (content-box / border-box)</div>
+        <div>border의 box-sizing에는 content-box, border-box가 있음</div>
+        <div>기본적으로 content-box인거같은데, 아무튼 각각 의미는 이러함</div>
+        <div class="codelists">
+          <div>content-box는 border 크기를 width, height에 포함하지 않겠다!</div>
+          <div>content-box는 padding 값을 width, height에 포함하지 않겠다!</div>
+        </div>
+        <div class="codelists">
+          <div>border-box는 border 크기를 width, height에 포함하겠다!</div>
+          <div>border-box는 padding 값을 width, height에 포함하겠다!</div>
+        </div>
+        <div class="codetitle">overflow</div>
+        <div>기본적인 overflow는 auto로 돼있음.</div>
+        <div>이게 있으면 내부 컨텐츠가 외부 요소에서부터 넘치면(overflow) 어떻게 처리할 지를 다룸.</div>
+        <div class="codelists">
+          <div>overflow: ();overflow-x:();overflow-y:();</div>
+          <div>auto / visible / hidden / scroll</div>
+        </div>
+        <div class="codetitle">box-shadow</div>
+        <div class="codelists">
+          <div>box-shadow: I A B C D E</div>
+          <div>I는 inset. 적용하면 내부 그림자로 바뀜. 기본값은 outset(외부)</div>
+          <div>A는 X축 그림자, 양수가 오른쪽</div>
+          <div>B는 Y축 그림자, 양수가 아래쪽</div>
+          <div>C는 흐림의 정도</div>
+          <div>D는 상하좌우 퍼지는 범위</div>
+          <div>E는 그림자 색상</div>
+          <div>IABE / IABCE 이렇게만 있음. I는 생략 가능</div>
+          <br>
+          <div>근데 그냥 요소 하나 만들고 박스쉐도우값 주고 개발자도구에서 직접 수정해서 보는게 더 효율적임</div>
+          <div>아니면 <a href="https://shadows.brumm.af/" target="_blank">여기</a> 가던가..</div>
+          <div>구글에 막 <a href="https://www.google.com/search?q=css+shadow+generator&sourceid=chrome&ie=UTF-8" target="_blank">css shadow generator</a> 이런식으로 치면 별거 다 나옴</div>
+        </div>
+        <br>
+        <div class="css7boxshadow"></div>
+        <br>
+        <xmp>  .css7boxshadow{
+    background-color: #531c31;
+    width: 20vw;
+    height: 20vh;
+    box-shadow: 1px 2px 3px 4px #eb6f9e;
+  }</xmp>
+      </details>
+    </fieldset>
+    <fieldset><legend class="childLegend">2022-07-01 - CSS 8</legend>
+      <details><summary>배경 꾸미기</summary>
+        <div class="codetitle">이미지를 배경에 사용하기</div>
+        <div class="codelists">
+          <div>background-image: 말그대로 배경의 이미지 설정. url()로 사용된다.</div>
+        </div>
+        <div class="codelists">
+          <div>background-repeat: 배경 이미지의 반복출력 여부. 기본값은 repeat이며, 다양한 값이 존재한다.</div>
+          <div>ㄴ 값으로 A(가로 세로 둘 다일때) 또는 A(가로값) B(세로값)이 있다.</div>
+          <div>ㄴ no-repeat = 반복 안하고 그냥 한번만 출력하기. repeat과 함께 일반적으로 가장 많이 쓰인다.</div>
+          <div>ㄴ round = 가장 적절한 개수로 이미지를 불러오고, 크기를 부모 요소에 맞게 조절하고 꽉 채운다.</div>
+        </div>
+        <div class="codelists">
+          <div>background-position: 위치를 조정한다. 자세한 내용은 <a href="background position generator" target="_blank">여기</a>로 가서 직접 만들던가... 굳이 외울 필욘 없을 듯</div>
+        </div>
+        <div class="codelists">
+          <div>background-size: 크기를 조정한다. 기본 값은 auto.</div>
+          <div>ㄴ 가로 세로 값을 입력하면 된다. 하나만 입력하면 가로 세로 둘 다 하나의 값으로 변경된다.</div>
+          <div>ㄴ 가로를 auto, 세로를 200px를 하게 되면 세로 200px에 맞는 가로 값을 찾아서 맞춰준다.</div>
+          <div>ㄴ contain = 가로 세로 둘 중 가장 큰 값을 부모 요소의 크기에 딱 맞게 조정한다.</div>
+          <div>ㄴ cover = 가로 세로 둘 중 가장 작은 값을 부모 요소의 크기에 딱 맞게 조정한다.</div>
+        </div>
+        <div class="codetitle">배경에 그라데이션 넣기</div>
+        <div class="codelists">
+          <div>background: linear-gradient(A, B, C, D, E)</div>
+          <div>A, B = (색상, 색상)</div>
+          <div>A, B, C = (각도(숫자deg), 색상, 색상)</div>
+          <div>A, B, C = (색상, 색상, 색상)</div>
+          <div>A, B, C, D = (색상, 색상, 색상, 색상)</div>
+          <div>A, B, C, D, E = (각도(숫자deg), 색상, 색상, 색상, 색상)</div>
+          <br>
+          <div>각도 값은 기본적으로 180deg이며, 선언된 색상들이 위에서부터 아래로 순서대로 내려온다.</div>
+          <div>색상 값에는 퍼센트 값을 넣어서 얼마나 많은 비중을 차지하게 할 지 설정이 가능하다.</div>
+          <div>ㄴ e.g.</div>
+          <div>ㄴ linear-gradient(red 35%, white 65%);</div>
+          <br>
+          <div>더 자세한건 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gradient" target="_blank">여기</a>로 가거나.. 직접 만들기 싫으면 <a href="https://www.google.com/search?q=css+gradient+generator&oq=css+grad&sourceid=chrome&ie=UTF-8" target="_blank">css gradient generator</a> 뭐 이런 식으로 구글에 검색하자.</div>
+        </div>
+        <br>
+        <div class="css8boxgradient"></div>
+        <xmp>  .css8boxgradient {
+    width: 25vw;
+    height: 25vh;
+    background: linear-gradient(45deg, red, green, blue, yellow);
+  }</xmp>
       </details>
     </fieldset>
   </fieldset>
