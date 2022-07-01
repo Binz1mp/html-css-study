@@ -117,3 +117,47 @@ xmp {
   height: 25vh;
   background: linear-gradient(45deg, red, green, blue, yellow);
 }
+.css9boxsticky1 {
+  width: 25vw;
+  height: 25vh;
+  background-color: #531c31;
+}
+.css9boxsticky2 {
+  position: sticky;
+  top: 70vh;
+  width: 10vw;
+  height: 10vh;
+  background-color: #eb6f9e;
+}
+.css9boxzindexparant {
+  position: relative;
+  display: block;
+  height: 15vh;
+  color: #161616;
+  font-weight: bold;
+}
+.css9boxzindex1 {
+  position: absolute;
+  width: 10vw;
+  height: 10vh;
+  background-color: #e45936;
+  z-index: 1;
+}
+.css9boxzindex2 {
+  top: 15px;
+  left: 15px;
+  position: absolute;
+  width: 10vw;
+  height: 10vh;
+  background-color: #4ae436;
+  z-index: 2;
+}
+.css9boxzindex3 {
+  top: 30px;
+  left: 30px;
+  position: absolute;
+  width: 10vw;
+  height: 10vh;
+  background-color: #36dee4;
+  z-index: 3;
+}

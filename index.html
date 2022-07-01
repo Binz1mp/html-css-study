@@ -229,10 +229,10 @@
         </datalist>
         <hr>
         <progress min="0" max="100"></progress>
+        <progress min="0" max="100" value="20"></progress>
         <progress min="0" max="100" value="40"></progress>
         <progress min="0" max="100" value="60"></progress>
         <progress min="0" max="100" value="80"></progress>
-        <progress min="0" max="100" value="20"></progress>
         <progress min="0" max="100" value="100"></progress>
         <hr>
         <div>min = 0</div>
@@ -552,6 +552,49 @@
     height: 25vh;
     background: linear-gradient(45deg, red, green, blue, yellow);
   }</xmp>
+      </details>
+    </fieldset>
+    <fieldset><legend class="childLegend">2022-07-01 - CSS 9</legend>
+      <details><summary>포지셔닝</summary>
+        <div class="codetitle">position 속성</div>
+        <div>position 속성은 요소들이 화면에 배치되는 방식을 지정한다.</div>
+        <div>자식 요소에게 대물림되지 않는다.</div>
+        <div>자세한 것은 <a href="https://showcases.yalco.kr/html-css/02-09/01.html" target="_blank">여기</a>에서 확인.</div>
+        <div class="codelists">
+          <div>position: static</div>
+          <div>ㄴ 기본 값이다. top, bottom, left, right, z-index 속성의 영향을 받지 않는다.</div>
+          <br>
+          <div>position: relative</div>
+          <div>ㄴ top, bottom, left, right, z-index 속성의 영향을 받는다.</div>
+          <div>ㄴ 요소의 위치는 이동하나, 요소가 차지하는 공백의 위치는 유지된다.</div>
+          <br>
+          <div>position: absolute</div>
+          <div>ㄴ 바로 직계 부모의 요소를 기준으로 top, bottom, left, right, z-index 속성의 영향을 받는다.</div>
+          <div>ㄴ 만약 직계 부모의 요소가 static이면, 기준이 되지 못한다. 그 외는 기준 O</div>
+          <br>
+          <div>posiition: fixed</div>
+          <div>ㄴ 현재 브라우저 viewport 기준으로 '고정된' 위치에 자리하게 된다.</div>
+          <div>ㄴ 이는 스크롤을 해도 그 위치에 그대로 붕 떠서 위치한다.</div>
+          <br>
+          <div class="css9boxsticky1">
+            <div class="css9boxsticky2"></div>
+          </div>
+          <div>position: sticky</div>
+          <div>ㄴ top 속성과 같이 쓰면 좋다.</div>
+          <div>ㄴ top 속성의 값만큼 스크롤을 내리기 전까진 그 위치를 유지하다가,</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;스크롤을 값만큼 내리면 fixed처럼 viewport에서 고정되며, relative처럼 공백은 유지된다.</div>
+        </div>
+        <div class="codetitle">z-index</div>
+        <div>z-index 속성은 그냥 종이를 눕힌 순서라고 보면 됨. 3차원적으로 그 위에 종이를 놓으면 덮이는것처럼..</div>
+        <div class="codelists">
+          <div class="css9boxzindexparant">
+            <div class="css9boxzindex1">1</div>
+            <div class="css9boxzindex2">2</div>
+            <div class="css9boxzindex3">3</div>
+          </div>
+          <div>z-index 높은 순서</div>
+          <div>ㄴ 민트색 > 연두색 > 당근색</div>
+        </div>
       </details>
     </fieldset>
   </fieldset>
