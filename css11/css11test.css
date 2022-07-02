@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+}
+#css11test-mainbody {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+#css11test-menu-parent {
+  display: flex;
+  background-color: rgb(43, 43, 92);
+  padding: 10px;
+  /* width: 100vw; */
+  height: 75px;
+  gap: 10px;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+}
+#css11test-logo {
+  background-color: rgb(114, 156, 194);
+  /* width: 10vw; */
+  flex-basis: 100px;
+  /* height: 50px; */
+  text-align: center;
+  padding: 12px 0;
+}
+#css11test-menu-children {
+  background-color: rgb(75, 124, 108);
+  /* width: 10vw; */
+  /* height: 50px; */
+  flex-grow: 1;
+  text-align: center;
+  padding: 12px 0;
+}
+#css11test-maincontent {
+  display: flex;
+  flex-grow: 1;
+  background-color: rgb(27, 27, 27);
+  align-items: center;
+  justify-content: center;
+}
+#css11test-middlebox {
+  width: 20vw;
+  padding: 25px 0;
+  background-color: rgb(67, 168, 72);
+  text-align: center;
+}
+#css11test-footer {
+  display: flex;
+  flex-basis: 50px;
+  background-color: brown;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}

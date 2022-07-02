@@ -640,6 +640,96 @@
         </div>
       </details>
     </fieldset>
+    <fieldset><legend class="childLegend">2022-07-02 - CSS 11</legend>
+      <details><summary>Flex 레이아웃 - 부모 요소</summary>
+        <div class="codetitle">Flex 정렬 - 부모 <a href="https://showcases.yalco.kr/html-css/02-11/01.html" target="_blank">(여기 꼭 참조)</a></div>
+        <div class="codetitle">Flex 부모 요소에 해당되는 속성값이다.</div>
+        <div class="codelists tmpflex">
+          <div>
+            <div class="css11boxflex">
+              <div>display: flex</div>
+              <div class="css11boxcolored1"></div>
+              <div class="css11boxcolored2"></div>
+              <div class="css11boxcolored3"></div>
+              <div>말말말</div>
+            </div>
+            <br>
+            <div class="css11boxinlineflex">
+              <div>display: inline-flex</div>
+              <div class="css11boxcolored1"></div>
+              <div class="css11boxcolored2"></div>
+              <div class="css11boxcolored3"></div>
+              <div>말말말</div>
+            </div>
+            <div>외부의 텍스트</div>
+          </div>
+          <div class="css11boxblock">
+            <div>display: block</div>
+            <div class="css11boxcolored1"></div>
+            <div class="css11boxcolored2"></div>
+            <div class="css11boxcolored3"></div>
+            <div>말말말</div>
+          </div>
+        </div>
+        <div class="codelists">
+          <div>gap: ;</div>
+          <div>ㄴ flex 자식 요소간의 간격(gap)을 정해준다.</div>
+          <div>가로 세로 / 가로세로 값으로 쓰인다.</div>
+          <br>
+          <div>flex-direction: ;</div>
+          <div>ㄴ row = 가로 방향으로 1 2 3 나열 ( | | | ), 기본값</div>
+          <div>ㄴ column = 세로 방향으로 1 2 3 나열 ( ≡ )</div>
+          <div>ㄴ *-reverse = * 방향의 역방향으로 3 2 1 나열</div>
+          <br>
+          <div>justify-content: ;</div>
+          <div>ㄴ flex-start = flex가 시작되는 부분부터 정렬, 기본값</div>
+          <div>ㄴ flex-end = flex가 끝나는 부분부터 정렬</div>
+          <div>ㄴ space-between = 양쪽 요소를 끝으로 보내고 가운데에 공백을 동일하게</div>
+          <div>ㄴ space-around = 각 요소의 좌우 공백을 동일하게, 하지만 그 사이 요소의 간격을 더함.</div>
+          <div>ㄴ space-evenly = 각 요소의 좌우 공백을 동일하게, 하지만 그 사이 요소의 간격을 더하지 않음.</div>
+          <div>ㄴ center = 가로 중앙 정렬</div>
+          <br>
+          <div>align-items: ;</div>
+          <div>ㄴ flex-start = flex가 시작되는 부분부터 정렬</div>
+          <div>ㄴ flex-end = flex가 끝나는 부분부터 정렬</div>
+          <div>ㄴ stretch = 부모 요소의 끝부분까지 쭉 잡아당김(stretch)</div>
+          <div>ㄴ center = 세로 중앙 정렬</div>
+          <br>
+          <div>flex-wrap: ;</div>
+          <div>기본적으로 flex 자식의 개수의 총 크기가 부모 요소의 크기보다 더 클 경우;</div>
+          <div>ㄴ nowrap = flex-direction에서 정해진 대로 부모 요소를 뚫어서 정렬한다.</div>
+          <div>ㄴ wrap = flex-direction에서 정해진 대로 부모 요소 안에서 정렬한다.</div>
+          <div><a href="https://showcases.yalco.kr/html-css/02-11/01.html" target="_blank">여기 꼭 참조하자. flex가 가장 중요하다.</a></div>
+        </div>
+      </details>
+      <details><summary>Flex 레이아웃 - 자식 요소</summary>
+        <div class="codetitle">Flex 정렬 - 자식 <a href="https://showcases.yalco.kr/html-css/02-11/02.html" target="_blank">(여기 꼭 참조)</a></div>
+        <div class="codetitle">Flex 자식 요소에 해당되는 속성값이다.</div>
+        <div class="codelists">
+          <div class="css11boxflex-child">
+            <div class="css11boxcolored4"><div>나를 움직여봐라</div></div>
+            <div class="css11boxcolored5">1</div>
+            <div class="css11boxcolored5">2</div>
+            <div class="css11boxcolored5">3</div>
+          </div>
+          <div>flex-basis: ;</div>
+          <div>ㄴ flex-direction의 방향에 따라 해당 자식의 크기를 조정한다. 기본 값은 auto.</div>
+          <div>ㄴ 방향에 맞는 width 또는 height의 값을 덮어씌운다.</div>
+          <br>
+          <div>flex-grow: ;</div>
+          <div>ㄴ 해당 요소가 부모 요소만큼의 공간을 n의 비율로 나눠서 채운다. 기본 값은 0.</div>
+          <div>ㄴ 공간이 남는 상황에서 얼마나 더 줄 지를 정한다고 보면 된다.</div>
+          <br>
+          <div>flex-shrink: ;</div>
+          <div>ㄴ 자식 요소들이 부모 요소들의 공간을 꽉 채우고, n의 비율로 나눠서 크기를 줄인다. 기본 값은 1.</div>
+          <div>ㄴ 공간이 부족한 상황에서 얼마나 나눠줄지를 정한다고 보면 된다.</div>
+          <div></div>
+          <div></div>
+          <div><a href="https://showcases.yalco.kr/html-css/02-11/02.html" target="_blank">여기 꼭 참조하자. flex가 가장 중요하다.</a></div>
+        </div>
+      </details>
+      <a href="./css11/css11test.html" target="_blank">Flex 중간실습</a>
+    </fieldset>
   </fieldset>
 </body>
 </html>

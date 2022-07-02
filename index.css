@@ -191,3 +191,55 @@ xmp {
   height: 65px;
   transition: height 0.1s ease-in-out;
 }
+.tmpflex {
+  display: flex;
+}
+.css11boxflex {
+  display: flex;
+  width: 50vw;
+  height: 15vw;
+  background-color: #2e3450;
+}
+.css11boxinlineflex {
+  display: inline-flex;
+  width: 50vw;
+  height: 15vw;
+  background-color: #1e2130;
+}
+.css11boxblock {
+  display: block;
+  width: 15vw;
+  height: 37vw;
+  background-color: #223174;
+}
+.css11boxcolored1, .css11boxcolored2, .css11boxcolored3 {
+  width: 10vw;
+  height: 10vw;
+  border: 1px solid #3a2737;
+}
+.css11boxcolored1{background-color: #b3523a;}
+.css11boxcolored2{background-color: #75c06b;}
+.css11boxcolored3{background-color: #71d3d6;}
+.css11boxflex-child {
+  display: flex;
+  background-color: #2e3450;
+  width: 50vw;
+  height: 10vh;
+  gap: 1rem;
+  padding: 1rem;
+}
+.css11boxcolored4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2e4ac9;
+  flex-basis: 35%;
+  width: 25%;
+}
+.css11boxcolored5{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5060ac;
+  width: 10%;
+}
