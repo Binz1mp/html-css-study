@@ -124,7 +124,7 @@ xmp {
 }
 .css9boxsticky2 {
   position: sticky;
-  top: 70vh;
+  top: 50vh;
   width: 10vw;
   height: 10vh;
   background-color: #eb6f9e;
@@ -160,4 +160,34 @@ xmp {
   height: 10vh;
   background-color: #36dee4;
   z-index: 3;
+}
+.css9boxcenter {
+  background-color: #2e3450;
+  width: 10vh;
+  /* 일부러 width에 vh값 준거임 */
+  height: 10vh;
+  margin: auto;
+}
+.css10boxflex {
+  display: flex;
+  height: 75px;
+}
+#css10boxcursor1, #css10boxcursor2, #css10boxcursor3, #css10boxcursor4, #css10boxcursor5 {
+  width: 150px;
+  height: 55px;
+  background-color: #2b3b29;
+  border: 1px solid aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.1s ease-in-out;
+}
+#css10boxcursor1 {cursor: auto;}
+#css10boxcursor2 {cursor: default;}
+#css10boxcursor3 {cursor: pointer;}
+#css10boxcursor4 {cursor: zoom-in;}
+#css10boxcursor5 {cursor: not-allowed;}
+#css10boxcursor1:hover, #css10boxcursor2:hover, #css10boxcursor3:hover, #css10boxcursor4:hover, #css10boxcursor5:hover {
+  height: 65px;
+  transition: height 0.1s ease-in-out;
 }
