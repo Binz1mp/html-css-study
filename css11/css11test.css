@@ -4,7 +4,7 @@ body {
 #css11test-mainbody {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
 }
 #css11test-menu-parent {
@@ -12,10 +12,12 @@ body {
   background-color: rgb(43, 43, 92);
   padding: 10px;
   /* width: 100vw; */
-  height: 75px;
+  /* height: 75px; */
+  flex-basis: 75px;
   gap: 10px;
   flex-wrap: nowrap;
   align-items: flex-end;
+  flex-direction: row;
 }
 #css11test-logo {
   background-color: rgb(114, 156, 194);
@@ -41,8 +43,8 @@ body {
   justify-content: center;
 }
 #css11test-middlebox {
-  width: 20vw;
-  padding: 25px 0;
+  /* width: 20vw; */
+  padding: 25px;
   background-color: rgb(67, 168, 72);
   text-align: center;
 }
