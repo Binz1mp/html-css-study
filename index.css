@@ -7,6 +7,19 @@
     color: #c7c7c7;
   }
 }
+.goto {
+  border: 1px solid #c7c7c7;
+  margin-top: 1%;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+}
+div.goto > a:not(:first-child) {
+  margin-left: 1%;
+}
 .temp {
   background-color: black;
   width: 25vw;

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <title>CSS 기본</title>
+</head>
+<body>
+  <h2 class="maintitle">OS에서 다크모드를 사용중이면 이 페이지도 다크모드로 바뀝니다. <s style="opacity: 0.25;">내가 보기 편하려고</s></h2>
+  <xmp title="고마워요 media 대단해!!!!!">  /* 사용자가 윈도우 다크모드면 아래 속성 사용 */
+  @media (prefers-color-scheme : dark) {
+    body {
+      background-color: #161616;
+      color: #c7c7c7;
+    }
+  }</xmp>
+  <div class="goto">
+    <a href="./htmlindex.html">HTML 기본으로 가기</a>
+    <a href="./cssindex.html"><s>CSS 기본으로 가기</s></a>
+    <a href="./more/htmlmore.html"><s>HTML 심화로 가기</s></a>
+  </div>
+  <fieldset><legend class="parentLegend">CSS 기본</legend>
+    <fieldset><legend class="childLegend">2022-06-22 - CSS 0</legend>
+      <details><summary>CSS로 넘어가기 전에...</summary>
+        <pre>
+    pre 태그에 텍스트를 작성하면 스페이스, 탭, 엔터 등
+    모든 공백 요소들이 이와 같이 화면에 그대로 적용됩니다.
+
+    때문에 pre 태그는 아래의 아스키 아트(Ascii art)들처럼
+    공백요소들을 적극 활용해야 하는 경우 유용하게 사용될 수 있습니다.
+
+    하지만 스크린 리더는 pre 태그의 내용을 읽지 않으므로
+    접근성을 위해 추가적인 조치가 필요하죠.
+    이 부분은 HTML 심화편에서 다루겠습니다.
+
+        ,d888a                          ,d88888888888ba.  ,88"I)   d
+      a88']8i                         a88".8"8)   `"8888:88  " _a8'
+    .d8P' PP                        .d8P'.8  d)      "8:88:baad8P'
+    ,d8P' ,ama,   .aa,  .ama.g ,mmm  d8P' 8  .8'        88):888P'
+    ,d88' d8[ "8..a8"88 ,8I"88[ I88' d88   ]IaI"        d8[         
+    a88' dP "bm8mP8'(8'.8I  8[      d88'    `"         .88          
+    ,88I ]8'  .d'.8     88' ,8' I[  ,88P ,ama    ,ama,  d8[  .ama.g
+    [88' I8, .d' ]8,  ,88B ,d8 aI   (88',88"8)  d8[ "8. 88 ,8I"88[
+    ]88  `888P'  `8888" "88P"8m"    I88 88[ 8[ dP "bm8m88[.8I  8[
+    ]88,          _,,aaaaaa,_       I88 8"  8 ]P'  .d' 88 88' ,8' I[
+    `888a,.  ,aadd88888888888bma.   )88,  ,]I I8, .d' )88a8B ,d8 aI
+    "888888PP"'        `8""""""8   "888PP'  `888P'  `88P"88P"8m"
+        </pre>
+      </details>
+    </fieldset>
+    <fieldset><legend class="childLegend">2022-06-29 - CSS 1</legend>
+      <details><summary>적용방법과 선택자들</summary>
+        <div>평범하게 css 적용하는 방법은 대표적으로 세가지가 있음</div>
+        <ol>
+          <li>
+          html 태그마다 style 속성 넣어서 하기. 근데 비추임. 왜냐면 코드 분리가 안돼있어서 지저분해보임.
+          </li>
+          <li>
+          head 태그 안에 style 태그 넣고 거기에 넣는거. 이거도 별로임. 왜냐면 나중에 길어지면 문서 관리하기 귀찮아짐.
+          </li>
+          <li>
+          css 파일 만들어서 head  태그 안에 링크시키기. 이게 최고임. 왜냐면 코드 분리가 돼있어서 정리하기도 보기도 편함.
+          <br>
+          3-1. 방법은 쉬움. head 태그 안에 이런 형식으로 입력하면 됨
+          <xmp>  <link rel="stylesheet" href="./index.css"></xmp>
+          <br>
+          3-2. 그리고 index.css 파일에는 이런 형식으로 입력하면 됨
+          <xmp> /* .css */
+  선택자 {
+    속성1: 값;
+    속성2: 값;
+  }
+
+  /* 예시 */
+  div {
+    color: red;
+    font-weight: bold;
+    background-color: black;
+  }</xmp>
+          </li>
+        </ul>
+      </details>
+    </fieldset>
+    <fieldset><legend class="childLegend">2022-06-29 - CSS 2</legend>
+      <details><summary>글자와 텍스트 스타일</summary>
+        <div>font-size에 관여하는 속성</div>
+        <ul>
+          <li>px. 절대값이며 픽셀 단위다.</li>
+          <li>%. 말 그대로 퍼센트이다. 부모 요소 안에서 상대적 크기를 가진다.</li>
+          <li>em. 100%는 1em이다.</li>
+          <li>rem. html 요소의 상대적 크기를 갖고, 요소의 중첩에 영향을 받지 않는다!!!</li>
+          <div>┕ 요소의 중첩에 영향을 받지 않는다는 것은, A 요소 안에 A 요소 있으면, 둘 다 적용이 되는게 아니다 라는 것이다.</div>
+          <div>┕ 왜냐하면 html 이라는 최상단 요소에 비례해서 적용한다는 것이다.</div>
+          <li>pt. 1인치/72다. 프린트할 컨텐츠에 사용된다.</li>
+        </ul>
+        <div class="css2div">text-decoration 속성 응용</div>
+        <xmp>.css2div {
+    text-decoration: overline underline red;
+    text-transform: capitalize;
+  }</xmp>
+      </details>
+    </fieldset>
+    <fieldset><legend class="childLegend">2022-06-30 - CSS 3</legend>
+      <details><summary>문단과 목록 스타일</summary>
+        <div class="codetitle">정렬과 간격</div>
+        <div class="codelists">
+          <div>letter-spacing = 자간</div>
+          <div>word-spacing = 띄어쓰기의 간격, em 단위를 사용하는 것을 추천함</div>
+          <div>line-height = 행간, em 단위를 사용하는 것을 추천함</div>
+          <div>text-indent = 양수값이면 들여쓰기, 음수값이면 내어쓰기</div>
+        </div>
+        <div class="codetitle">리스트 스타일</div>
+        <div class="codelists">
+          <div>list-style = ul ol만들때 앞에 생기는 기호를 바꿀 수 있음. ""안에 원하는 문자열, 이모지 가능. url()도 가능</div>
+          <ul class="css3ul">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+          <div>ul li가 있을 때, li에 display inline-block 하면 가로 정렬됨</div>
+        </div>
+      </details>
+    </fieldset>
+    <fieldset><legend class="childLegend">2022-06-30 - CSS 4</legend>
+      <details><summary>색 표현하기</summary>
+        <div class="codetitle">색상 표현</div>
+        <div class="codelists">
+          <div>color = 해당 요소의 폰트 색상. 값으로써 hex, rgba, keyword, hsla 가능</div>
+          <div>background-color = 말 그대로 해당 요소의 배경색. 값으로써 hex, rgba, keyword, hsla 가능</div>
+        </div>
+      </details>
+    </fieldset>
+    <fieldset><legend class="childLegend">2022-06-30 - CSS 5</legend>
+      <details><summary>inline 요소와 block 요소</summary>
+        <div class="codetitle"></div>
+          <div>span과 div의 가장 큰 차이는 display가 inline이냐, block이냐임. 기본적으로 span은 inline, div는 block.</div>
+          <div>inline은 한 요소가 한 줄을 차지하지 않고, block은 차지한다.</div>
+          <table>
+            <tr>
+              <th class="css-td"></td>
+              <th class="css-td">inline</td>
+              <th class="css-td">block</td>
+              <th class="css-td">inline-block</td>
+            </tr>
+            <tr>
+              <th class="css-td">기본 너비</td>
+              <td class="css-td">컨텐츠만큼</td>
+              <td class="css-td">부모의 너비만큼</td>
+              <td class="css-td">컨텐츠만큼</td>
+            </tr>
+            <tr>
+              <th class="css-td">width, height</td>
+              <td class="css-td">무시</td>
+              <td class="css-td">적용</td>
+              <td class="css-td">적용</td>
+            </tr>
+            <tr>
+            <tr>
+              <th class="css-td">가로공간 차지</td>
+              <td class="css-td">공유</td>
+              <td class="css-td">독점</td>
+              <td class="css-td">적용</td>
+            </tr>
+            <tr>
+              <th class="css-td">margin 속성</td>
+              <td class="css-td">가로만</td>
+              <td class="css-td">모두 (상하는 무시됨)</td>
+              <td class="css-td">모두</td>
+            </tr>
+            <tr>
+              <th class="css-td">padding 속성</td>
+              <td class="css-td">가로만, 세로는 배경색만</td>
+              <td class="css-td">모두</td>
+              <td class="css-td">모두</td>
+            </tr>
+          </table>
+          <div>
+            <div class="codetitle">예시</div>
+            <div class="codelists">
+              <div>inline-block에 background-color를 쓸 경우, inline과 다르게 block처럼 살짝 위아래로 꽉 차게 색칠된다.</div>
+              <span class="span-inline">span+inline</span>
+              <span class="span-block">span+block</span>
+              <span class="span-inline-block">span+inline-block</span>
+              <span class="span-inline">span+inline</span>
+              <span class="span-block">span+block</span>
+              <span class="span-inline-block">span+inline-block</span>
+            </div>
+          </div>
+      </details>
+    </fieldset>
+    <fieldset><legend class="childLegend">2022-06-30 - CSS 6</legend>
+      <details><summary>박스 모델 - 1</summary>
+        <div class="codetitle">박스 모델 다루기 1</div>
+          <div class="css6box">
+            <div class="css6text">
+              <div>이건 상자야</div>
+              <div>상자에 margin auto를 주면 가로세로 중앙정렬이 된단다</div>
+              <div>상자에 margin 0 auto를 주면 가로 중앙정렬이 된단다</div>
+              <div>아참 얘네는 display block일때로만 적용된단다.</div>
+              <div>inline이면 박스의 부모 요소에 text align center 주면 된단다</div>
+            </div>
+          </div>
+          <div class="css6boxflex">
+            <div>안녕?</div>
+            <div>세로 중앙 정렬 텍스트는 처음보지?</div>
+            <div>flex를 사용하면 이렇게 된단다.</div>
+            <div>flex-direction은 한 요소마다 다음 줄로 내리기</div>
+            <div>justify-content는 세로중앙</div>
+            <div>align-content는 가로중앙</div>
+          </div>
+      </details>
+      <legend class="childLegend">2022-07-01 - CSS 7</legend>
+      <details><summary>박스 모델 - 2</summary>
+        <div class="codetitle">box-sizing: (content-box / border-box)</div>
+        <div>border의 box-sizing에는 content-box, border-box가 있음</div>
+        <div>기본적으로 content-box인거같은데, 아무튼 각각 의미는 이러함</div>
+        <div class="codelists">
+          <div>content-box는 border 크기를 width, height에 포함하지 않겠다!</div>
+          <div>content-box는 padding 값을 width, height에 포함하지 않겠다!</div>
+        </div>
+        <div class="codelists">
+          <div>border-box는 border 크기를 width, height에 포함하겠다!</div>
+          <div>border-box는 padding 값을 width, height에 포함하겠다!</div>
+        </div>
+        <div class="codetitle">overflow</div>
+        <div>기본적인 overflow는 auto로 돼있음.</div>
+        <div>이게 있으면 내부 컨텐츠가 외부 요소에서부터 넘치면(overflow) 어떻게 처리할 지를 다룸.</div>
+        <div class="codelists">
+          <div>overflow: ();overflow-x:();overflow-y:();</div>
+          <div>auto / visible / hidden / scroll</div>
+        </div>
+        <div class="codetitle">box-shadow</div>
+        <div class="codelists">
+          <div>box-shadow: I A B C D E</div>
+          <div>I는 inset. 적용하면 내부 그림자로 바뀜. 기본값은 outset(외부)</div>
+          <div>A는 X축 그림자, 양수가 오른쪽</div>
+          <div>B는 Y축 그림자, 양수가 아래쪽</div>
+          <div>C는 흐림의 정도</div>
+          <div>D는 상하좌우 퍼지는 범위</div>
+          <div>E는 그림자 색상</div>
+          <div>IABE / IABCE 이렇게만 있음. I는 생략 가능</div>
+          <br>
+          <div>근데 그냥 요소 하나 만들고 박스쉐도우값 주고 개발자도구에서 직접 수정해서 보는게 더 효율적임</div>
+          <div>아니면 <a href="https://shadows.brumm.af/" target="_blank">여기</a> 가던가..</div>
+          <div>구글에 막 <a href="https://www.google.com/search?q=css+shadow+generator&sourceid=chrome&ie=UTF-8" target="_blank">css shadow generator</a> 이런식으로 치면 별거 다 나옴</div>
+        </div>
+        <br>
+        <div class="css7boxshadow"></div>
+        <br>
+        <xmp>  .css7boxshadow{
+    background-color: #531c31;
+    width: 20vw;
+    height: 20vh;
+    box-shadow: 1px 2px 3px 4px #eb6f9e;
+  }</xmp>
+      </details>
+    </fieldset>
+    <fieldset><legend class="childLegend">2022-07-01 - CSS 8</legend>
+      <details><summary>배경 꾸미기</summary>
+        <div class="codetitle">이미지를 배경에 사용하기</div>
+        <div class="codelists">
+          <div>background-image: 말그대로 배경의 이미지 설정. url()로 사용된다.</div>
+        </div>
+        <div class="codelists">
+          <div>background-repeat: 배경 이미지의 반복출력 여부. 기본값은 repeat이며, 다양한 값이 존재한다.</div>
+          <div>ㄴ 값으로 A(가로 세로 둘 다일때) 또는 A(가로값) B(세로값)이 있다.</div>
+          <div>ㄴ no-repeat = 반복 안하고 그냥 한번만 출력하기. repeat과 함께 일반적으로 가장 많이 쓰인다.</div>
+          <div>ㄴ round = 가장 적절한 개수로 이미지를 불러오고, 크기를 부모 요소에 맞게 조절하고 꽉 채운다.</div>
+        </div>
+        <div class="codelists">
+          <div>background-position: 위치를 조정한다. 자세한 내용은 <a href="background position generator" target="_blank">여기</a>로 가서 직접 만들던가... 굳이 외울 필욘 없을 듯</div>
+        </div>
+        <div class="codelists">
+          <div>background-size: 크기를 조정한다. 기본 값은 auto.</div>
+          <div>ㄴ 가로 세로 값을 입력하면 된다. 하나만 입력하면 가로 세로 둘 다 하나의 값으로 변경된다.</div>
+          <div>ㄴ 가로를 auto, 세로를 200px를 하게 되면 세로 200px에 맞는 가로 값을 찾아서 맞춰준다.</div>
+          <div>ㄴ contain = 가로 세로 둘 중 가장 큰 값을 부모 요소의 크기에 딱 맞게 조정한다.</div>
+          <div>ㄴ cover = 가로 세로 둘 중 가장 작은 값을 부모 요소의 크기에 딱 맞게 조정한다.</div>
+        </div>
+        <div class="codetitle">배경에 그라데이션 넣기</div>
+        <div class="codelists">
+          <div>background: linear-gradient(A, B, C, D, E)</div>
+          <div>A, B = (색상, 색상)</div>
+          <div>A, B, C = (각도(숫자deg), 색상, 색상)</div>
+          <div>A, B, C = (색상, 색상, 색상)</div>
+          <div>A, B, C, D = (색상, 색상, 색상, 색상)</div>
+          <div>A, B, C, D, E = (각도(숫자deg), 색상, 색상, 색상, 색상)</div>
+          <br>
+          <div>각도 값은 기본적으로 180deg이며, 선언된 색상들이 위에서부터 아래로 순서대로 내려온다.</div>
+          <div>색상 값에는 퍼센트 값을 넣어서 얼마나 많은 비중을 차지하게 할 지 설정이 가능하다.</div>
+          <div>ㄴ e.g.</div>
+          <div>ㄴ linear-gradient(red 35%, white 65%);</div>
+          <br>
+          <div>더 자세한건 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gradient" target="_blank">여기</a>로 가거나.. 직접 만들기 싫으면 <a href="https://www.google.com/search?q=css+gradient+generator&oq=css+grad&sourceid=chrome&ie=UTF-8" target="_blank">css gradient generator</a> 뭐 이런 식으로 구글에 검색하자.</div>
+        </div>
+        <br>
+        <div class="css8boxgradient"></div>
+        <xmp>  .css8boxgradient {
+    width: 25vw;
+    height: 25vh;
+    background: linear-gradient(45deg, red, green, blue, yellow);
+  }</xmp>
+      </details>
+    </fieldset>
+    <fieldset><legend class="childLegend">2022-07-01 - CSS 9</legend>
+      <details><summary>포지셔닝</summary>
+        <div class="codetitle">position 속성</div>
+        <div>position 속성은 요소들이 화면에 배치되는 방식을 지정한다.</div>
+        <div>자식 요소에게 대물림되지 않는다.</div>
+        <div>자세한 것은 <a href="https://showcases.yalco.kr/html-css/02-09/01.html" target="_blank">여기</a>에서 확인.</div>
+        <div class="codelists">
+          <div>position: static</div>
+          <div>ㄴ 기본 값이다. top, bottom, left, right, z-index 속성의 영향을 받지 않는다.</div>
+          <br>
+          <div>position: relative</div>
+          <div>ㄴ top, bottom, left, right, z-index 속성의 영향을 받는다.</div>
+          <div>ㄴ 요소의 위치는 이동하나, 요소가 차지하는 공백의 위치는 유지된다.</div>
+          <br>
+          <div>position: absolute</div>
+          <div>ㄴ 바로 직계 부모의 요소를 기준으로 top, bottom, left, right, z-index 속성의 영향을 받는다.</div>
+          <div>ㄴ 만약 직계 부모의 요소가 static이면, 기준이 되지 못한다. 그 외는 기준 O</div>
+          <br>
+          <div>posiition: fixed</div>
+          <div>ㄴ 현재 브라우저 viewport 기준으로 '고정된' 위치에 자리하게 된다.</div>
+          <div>ㄴ 이는 스크롤을 해도 그 위치에 그대로 붕 떠서 위치한다.</div>
+          <br>
+          <div class="css9boxsticky1">
+            <div class="css9boxsticky2"></div>
+          </div>
+          <div>position: sticky</div>
+          <div>ㄴ top 속성과 같이 쓰면 좋다.</div>
+          <div>ㄴ top 속성의 값만큼 스크롤을 내리기 전까진 그 위치를 유지하다가,</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;스크롤을 값만큼 내리면 fixed처럼 viewport에서 고정되며, relative처럼 공백은 유지된다.</div>
+        </div>
+        <div class="codetitle">z-index</div>
+        <div>z-index 속성은 그냥 종이를 눕힌 순서라고 보면 됨. 3차원적으로 그 위에 종이를 놓으면 덮이는것처럼..</div>
+        <div class="codelists">
+          <div class="css9boxzindexparant">
+            <div class="css9boxzindex1">1</div>
+            <div class="css9boxzindex2">2</div>
+            <div class="css9boxzindex3">3</div>
+          </div>
+          <div>z-index 높은 순서</div>
+          <div>ㄴ 민트색 > 연두색 > 당근색</div>
+          <div class="css9boxcenter"></div>
+        </div>
+      </details>
+    </fieldset>
+    <fieldset><legend class="childLegend">2022-07-02 - CSS 10</legend>
+      <details><summary>요소를 감추는 방법들</summary>
+        <div class="codetitle">cursor 속성</div>
+        <div class="codelists">
+          <div class="css10boxflex">
+            <div id="css10boxcursor1"><div>cursor: auto;</div></div>
+            <div id="css10boxcursor2"><div>cursor: default;</div></div>
+            <div id="css10boxcursor3"><div>cursor: pointer;</div></div>
+            <div id="css10boxcursor4"><div>cursor: zoom-in;</div></div>
+            <div id="css10boxcursor5"><div>cursor: not-allowed;</div></div>
+          </div>
+          <div>cursor: ;</div>
+          <div>cursor 속성은 해당 요소에 마우스를 올렸을 때(마우스 오버) 마우스 커서의 모양을 바꿔주는 역할을 한다.</div>
+          <div>ㄴ auto = 기본값</div>
+          <div>ㄴ default = 기본 마우스 모양 고정</div>
+          <div>ㄴ pointer = 마우스 손가락 클릭 모양</div>
+          <div>ㄴ zoom-in = 돋보기 확대 모양</div>
+          <div>ㄴ not-allowed = 금지/정지 모양</div>
+          <div>그 외에도 더 있으나, 그건 공식 문서를 가서 알아보도록...</div>
+        </div>
+        <div class="codetitle">opacity 속성</div>
+        <div class="codelists">
+          <div>opacity: ;</div>
+          <div>1이 100%이며, 0이 0%이다.</div>
+        </div>
+        <div class="codetitle">visibility 속성</div>
+        <div class="codelists">
+          <div>visibility: ;</div>
+          <div>visible, hidden두 값이 대표적으로 존재한다.</div>
+          <div>ㄴ 마우스 오버 효과나 포커스, 클릭 등도 무효하게 된다.</div>
+          <div>ㄴ 단, 원래 있던 요소의 자리(공간)은 그대로 남는다.</div>
+        </div>
+        <div class="codetitle">display 속성</div>
+        <div class="codelists">
+          <div>display: ;</div>
+          <div>진짜 중요하다.</div>
+          <div>종류가 엄청 다양하며, 필수로 쓰인다. 대표적으로 내가 나중에 배울 flex가 있다.</div>
+          <div>ㄴ 값을 none으로 줄 경우, 위에 쓴 visibility: hidden과 동일한 역할을 한다.</div>
+          <div>ㄴ 하지만 display: none은 원래 있던 요소의 자리(공간)도 남지 않는다.</div>
+        </div>
+      </details>
+    </fieldset>
+    <fieldset><legend class="childLegend">2022-07-02 - CSS 11</legend>
+      <details><summary>Flex 레이아웃 - 부모 요소</summary>
+        <div class="codetitle">Flex 정렬 - 부모 <a href="https://showcases.yalco.kr/html-css/02-11/01.html" target="_blank">(여기 꼭 참조)</a></div>
+        <div class="codetitle">Flex 부모 요소에 해당되는 속성값이다.</div>
+        <div class="codelists tmpflex">
+          <div>
+            <div class="css11boxflex">
+              <div>display: flex</div>
+              <div class="css11boxcolored1"></div>
+              <div class="css11boxcolored2"></div>
+              <div class="css11boxcolored3"></div>
+              <div>말말말</div>
+            </div>
+            <br>
+            <div class="css11boxinlineflex">
+              <div>display: inline-flex</div>
+              <div class="css11boxcolored1"></div>
+              <div class="css11boxcolored2"></div>
+              <div class="css11boxcolored3"></div>
+              <div>말말말</div>
+            </div>
+            <div>외부의 텍스트</div>
+          </div>
+          <div class="css11boxblock">
+            <div>display: block</div>
+            <div class="css11boxcolored1"></div>
+            <div class="css11boxcolored2"></div>
+            <div class="css11boxcolored3"></div>
+            <div>말말말</div>
+          </div>
+        </div>
+        <div class="codelists">
+          <div>gap: ;</div>
+          <div>ㄴ flex 자식 요소간의 간격(gap)을 정해준다.</div>
+          <div>가로 세로 / 가로세로 값으로 쓰인다.</div>
+          <br>
+          <div>flex-direction: ;</div>
+          <div>ㄴ row = 가로 방향으로 1 2 3 나열 ( | | | ), 기본값</div>
+          <div>ㄴ column = 세로 방향으로 1 2 3 나열 ( ≡ )</div>
+          <div>ㄴ *-reverse = * 방향의 역방향으로 3 2 1 나열</div>
+          <br>
+          <div>justify-content: ;</div>
+          <div>ㄴ flex-start = flex가 시작되는 부분부터 정렬, 기본값</div>
+          <div>ㄴ flex-end = flex가 끝나는 부분부터 정렬</div>
+          <div>ㄴ space-between = 양쪽 요소를 끝으로 보내고 가운데에 공백을 동일하게</div>
+          <div>ㄴ space-around = 각 요소의 좌우 공백을 동일하게, 하지만 그 사이 요소의 간격을 더함.</div>
+          <div>ㄴ space-evenly = 각 요소의 좌우 공백을 동일하게, 하지만 그 사이 요소의 간격을 더하지 않음.</div>
+          <div>ㄴ center = 가로 중앙 정렬</div>
+          <br>
+          <div>align-items: ;</div>
+          <div>ㄴ flex-start = flex가 시작되는 부분부터 정렬</div>
+          <div>ㄴ flex-end = flex가 끝나는 부분부터 정렬</div>
+          <div>ㄴ stretch = 부모 요소의 끝부분까지 쭉 잡아당김(stretch)</div>
+          <div>ㄴ center = 세로 중앙 정렬</div>
+          <br>
+          <div>flex-wrap: ;</div>
+          <div>기본적으로 flex 자식의 개수의 총 크기가 부모 요소의 크기보다 더 클 경우;</div>
+          <div>ㄴ nowrap = flex-direction에서 정해진 대로 부모 요소를 뚫어서 정렬한다.</div>
+          <div>ㄴ wrap = flex-direction에서 정해진 대로 부모 요소 안에서 정렬한다.</div>
+          <div><a href="https://showcases.yalco.kr/html-css/02-11/01.html" target="_blank">여기 꼭 참조하자. flex가 가장 중요하다.</a></div>
+        </div>
+      </details>
+      <details><summary>Flex 레이아웃 - 자식 요소</summary>
+        <div class="codetitle">Flex 정렬 - 자식 <a href="https://showcases.yalco.kr/html-css/02-11/02.html" target="_blank">(여기 꼭 참조)</a></div>
+        <div class="codetitle">Flex 자식 요소에 해당되는 속성값이다.</div>
+        <div class="codelists">
+          <div class="css11boxflex-child">
+            <div class="css11boxcolored4"><div>나를 움직여봐라</div></div>
+            <div class="css11boxcolored5">1</div>
+            <div class="css11boxcolored5">2</div>
+            <div class="css11boxcolored5">3</div>
+          </div>
+          <div>flex-basis: ;</div>
+          <div>ㄴ flex-direction의 방향에 따라 해당 자식의 크기를 조정한다. 기본 값은 auto.</div>
+          <div>ㄴ 방향에 맞는 width 또는 height의 값을 덮어씌운다.</div>
+          <br>
+          <div>flex-grow: ;</div>
+          <div>ㄴ 해당 요소가 부모 요소만큼의 공간을 n의 비율로 나눠서 채운다. 기본 값은 0.</div>
+          <div>ㄴ 공간이 남는 상황에서 얼마나 더 줄 지를 정한다고 보면 된다.</div>
+          <br>
+          <div>flex-shrink: ;</div>
+          <div>ㄴ 자식 요소들이 부모 요소들의 공간을 꽉 채우고, n의 비율로 나눠서 크기를 줄인다. 기본 값은 1.</div>
+          <div>ㄴ 공간이 부족한 상황에서 얼마나 나눠줄지를 정한다고 보면 된다.</div>
+          <div></div>
+          <div></div>
+          <div><a href="https://showcases.yalco.kr/html-css/02-11/02.html" target="_blank">여기 꼭 참조하자. flex가 가장 중요하다.</a></div>
+        </div>
+      </details>
+      <a href="./css11/css11test.html" target="_blank">Flex 실습</a>
+    </fieldset>
+  </fieldset>
+</body>
+</html>
