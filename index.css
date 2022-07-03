@@ -20,6 +20,9 @@
 div.goto > a:not(:first-child) {
   margin-left: 1%;
 }
+div.goto > s:not(:first-child) {
+  margin-left: 1%;
+}
 .temp {
   background-color: black;
   width: 25vw;
