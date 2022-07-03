@@ -1,0 +1,5 @@
+# more 폴더를 ignore
+more
+
+# more 폴더의 특정 파일만 ignore 하려면
+# more/파일.확장자
