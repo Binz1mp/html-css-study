@@ -17,10 +17,7 @@
   padding-bottom: 1%;
   padding-left: 1%;
 }
-div.goto > a:not(:first-child) {
-  margin-left: 1%;
-}
-div.goto > s:not(:first-child) {
+div.goto > a:not(:first-child), div.goto > s:not(:first-child), div.goto > span:not(:first-child) {
   margin-left: 1%;
 }
 .temp {
